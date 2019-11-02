@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>クライアント画面</title>
+</head>
+<body>
+    <form action ="#" th:action="@{/userlist}" method="POST" >
+<h1>商品一覧</h1>
+<h3>TV</h3>
+　<h5>価格 1000円</h5><button type="submit" name="test1" value="ボタン１">カートに追加</button>
+  <p><button type="submit" th:field="*{name1}" /></button>
+  </p>
+  <p><button type="submit" name="test1" value="Submit" /></button>
+  </p>
+</form>
+
+<form action ="#" th:action="@{/userlist}" method="POST" >
+<h3>エアコン</h3>
+　<h5>価格 20000円</h5><button type="submit" name="test2" value="ボタン2">カートに追加</button>
+  <p><button type="submit" th:field="*{name1}" /></button></p>
+    <p><button type="submit" name="test1" value="Submit" /></button></p>
+
+</form>
+
+<h3>車</h3>
+　<h5>価格 300000円</h5><button type="submit" name="test3" value="ボタン3">カートに追加</button>
+<dl>
+  <th:block th:each="map_list: ${map}">
+    <dt>
+      <span class="maps" th:text="${map.key}">
+       </span>
+    </dt>
+  </th:block>
+</dl>
+</body>
+</html>
