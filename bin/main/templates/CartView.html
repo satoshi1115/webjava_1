@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>merchandise</title>
+</head>
+<body>
+<h1>カート情報</h1>
+
+<!--  jspのth:if構文で「orderList」オブジェクトに何も値がないの時の操作 -->
+<p th:if="${#lists.isEmpty(orderList)}">注文内容がありません。</p>
+
+<!--jspのth:if構文で「orderList」オブジェクトに値が入っている時の操作  -->
+<table th:unless="${#lists.isEmpty(orderList)}"border="1">
+<thead>
+<tr>
+   <th>商品ID</th>
+   <th>商品名</th>
+   <th>価格</th>
+   <th>個数</th>
+   <th></th>
+   </tr>
+   </thead>
+   <tbody>
+
+   </tbody>
+</table>
+
+
+</body>
+</html>

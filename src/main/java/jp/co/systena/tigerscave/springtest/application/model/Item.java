@@ -1,4 +1,4 @@
-package jp.co.systena.tigerscave.springtest.application.view;
+package jp.co.systena.tigerscave.springtest.application.model;
 
 public class Item {
 
@@ -6,11 +6,17 @@ public class Item {
   private String name;
   private int price;
 
+  public Item(int itemId,String name,int price) {
+    this.ItemID = itemId;
+    this.name = name;
+    this.price = price;
+  }
+
   public int getItemId() {
     return ItemID;
   }
 
-  public int setItemID(int ID) {
+  public int setItemID(int itemId) {
     return ItemID;
   }
 
